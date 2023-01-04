@@ -3,18 +3,24 @@ const button = document.getElementById('converter-button')
 const select = document.getElementById('currency-select')
 
 
-const dolar = 5.2
-const euro = 5.9
-const bitcoin = 0.000011
 
-const converterValue = () => {
+
+const converterValue = async() => {
     const inputReais = document.getElementById('input-real').value
     const valueRealText = document.getElementById('real-value-text')
     const currencyValueText = document.getElementById('currency-value-text')
+    
+    
+    const data = await fetch('https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL').then(response => response.json())
+    
+    const dolar = data.USDBRL.high
+    const euro = data.EURBRL.high
+    const bitcoin = data.BTCBRL.high / 1000
+
     const converterCurrencyDolar = inputReais / dolar
     const converterCurrencyEuro = inputReais / euro
     const converterCurrencyBitcoin = inputReais * bitcoin
-    
+  
     valueRealText.innerHTML = new Intl.NumberFormat('pt-BR',
     { style: 'currency', currency: 'BRL' }
   ).format(inputReais);
