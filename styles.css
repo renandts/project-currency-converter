@@ -1,4 +1,5 @@
-* {
+
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,7 +8,7 @@
     line-height: 18px;
 }
 
-body {
+body{
     background-image: url(./Assets/moedas.png);
     background-size: 100%;
     display: flex;
@@ -23,7 +24,7 @@ body {
     
 }
 
-header {
+header{
     flex-wrap: wrap;
     background-color: #1b83e2;
     height: 66px;
@@ -32,25 +33,25 @@ header {
     align-content: center;
 }
 
-h1 {
+h1{
     font-weight: 400;
     font-size: 24px;
     color: #F4F4F4;
     
 }
 
-main {
+main{
     padding: 24px;
 }
 
-label {
+label{
     font-weight: 400;
     font-size: 14px;
 
     color: #777777;
 }
 
-select {
+select{
     background: #FFFFFF;
     border: 1px solid #BBBBBB;
     border-radius: 4px;
@@ -66,7 +67,7 @@ select {
     margin-bottom: 24px;
 }
 
-input {
+input{
     background: #FFFFFF;
     border: 1px solid #BBBBBB;
     border-radius: 4px;
@@ -79,7 +80,7 @@ input {
     font-size: 18px;
 }
 
-button {
+button{
     background: #1B83E2;
     border-radius: 25px;
     height: 48px;
@@ -95,15 +96,15 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+button:hover{
     opacity: 0.9;
 }
 
-button:active {
+button:active{
     opacity: 0.6;
 }
 
-section {
+section{
     border: 1px solid #1B83E2;
     border-radius: 4px;
     display: flex;
@@ -113,20 +114,20 @@ section {
 }
 
 
-.currency-container {
+.currency-container{
     padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center
 }
 
-.currency-name {
+.currency-name{
     font-weight: 400;
     font-size: 14px;
     color: #777777;
 }
 
-.currenty-value {
+.currenty-value{
     font-weight: 700;
     font-size: 20px;
     color: #1B83E2;
